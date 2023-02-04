@@ -6,12 +6,14 @@ body {
 
 div#content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-image: url("../images/resturant-background.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    gap: 100px;
 }
 
 header {
@@ -42,4 +44,29 @@ header {
 #restraurant-heading {
     margin: 0;
     font-size: 48px;
+}
+
+#home-content{
+    display: flex;
+    flex-wrap: wrap;
+    width: 750px;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#home-content > p {
+    text-align: center;
+    width: 500px;
+}
+
+button.selected {
+    border-bottom: 2px white solid;
+}
+
+button:hover {
+    transform: scale(1.2);
 }
