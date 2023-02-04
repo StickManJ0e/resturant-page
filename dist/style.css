@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+div#content {
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/resturant-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 10rem;
+    gap: 10px;
+}
+
+.button-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-tabs > button {
+    background-color: transparent;
+    color: white;
+    border: 0 none;
+    font-size: 24px;
+}
+
+#restraurant-heading {
+    margin: 0;
+    font-size: 48px;
+}
