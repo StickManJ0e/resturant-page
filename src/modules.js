@@ -8,8 +8,15 @@ function createElementIDText(elementType, idName, text) {
     return element;
 };
 
+//Function to create an element with text content and returns it
 function createElementText(elementType, text) {
     let element = document.createElement(elementType);
+    element.textContent = text;
+    return element;
+}
+function createElementClassText(elementType, className, text) {
+    let element = document.createElement(elementType);
+    element.classList.add(className);
     element.textContent = text;
     return element;
 }
@@ -29,8 +36,6 @@ function removeChildren(parentElement) {
 };
 
 function createHeaderElements() {
-    console.log("createHomeElements is working");
-
     //Create header
     let header = document.createElement('header');
     header.setAttribute('id', 'header');
@@ -54,7 +59,6 @@ function createHeaderElements() {
 };
 
 function createHomeElements() {
-    console.log("createHomeElements is working");
     removeChildren(contentDiv);
 
     //Create and append home content div
@@ -72,13 +76,36 @@ function createHomeElements() {
 };
 
 function createMenuElements() {
-    console.log('createMenuElements is working');
     removeChildren(contentDiv);
+
+    let menuDiv = document.createElement("div");
+    menuDiv.setAttribute('id', 'menu-div');
+    contentDiv.appendChild(menuDiv);
+
+    appendMultiple(menuDiv,
+        (createElementClassText("div", "food-item", 'Coffee')),
+        (createElementClassText("div", "food-item", 'Pizza')),
+        (createElementClassText("div", "food-item", 'Ice Cream')),
+        (createElementClassText("div", "food-item", 'Watermelon')),
+        (createElementClassText("div", "food-item", 'Cake')),
+        (createElementClassText("div", "food-item", 'Water')),
+        (createElementClassText("div", "food-item", 'Ice')),
+        (createElementClassText("div", "food-item", 'Heroin')),
+        (createElementClassText("div", "food-item", 'Peas')),
+    );
+    
 };
 
 function createContactElements() {
-    console.log('createContactElements is working');
     removeChildren(contentDiv);
+
+    let contactDiv = document.createElement("div");
+    contactDiv.setAttribute('id', 'contact-div');
+    contentDiv.appendChild(contactDiv);
+
+    appendMultiple(contactDiv,
+        (createElementIDText('p', 'phone-number', 'Ph: 0400 000 000')),
+        (createElementIDText('p', 'adresss', 'Address: 123 street suburb, State')))
 };
 
 export { createHeaderElements, createHomeElements, createMenuElements, createContactElements }; 
