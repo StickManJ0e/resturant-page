@@ -2,7 +2,7 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    background-image: url("../images/resturant-background.jpeg");
+    background-image: url("./images/resturant-background.jpeg");
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
